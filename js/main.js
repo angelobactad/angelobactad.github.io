@@ -13,7 +13,7 @@
     
     
     // Initiate the wowjs
-    // new WOW().init();
+    new WOW().init();
     
     
     // Back to top button
@@ -72,21 +72,6 @@
         }
     });
     
-            // Smooth scrolling on the BTN
-    $(".btn").on('click', function (event) {
-        if (this.hash !== "") {
-            event.preventDefault();
-            
-            $('html, body').animate({
-                scrollTop: $(this.hash).offset().top - 45
-            }, 1500, 'easeInOutExpo');
-            
-            if ($(this).parents('.navbar-nav').length) {
-                $('.navbar-nav .active').removeClass('active');
-                $(this).closest('a').addClass('active');
-            }
-        }
-    });
 
     // Typed Initiate
     if ($('.hero .hero-text h2').length == 1) {

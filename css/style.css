@@ -259,8 +259,17 @@ a:focus {
 @media (max-width: 575.98px) {
     .navbar .navbar-logo {
     width: auto;
-    height: 40px;
+    height: 30px;
     padding-right: 5px;
+    }
+
+    .navbar .navbar-brand {
+    margin: 0;
+    font-size: 30px;
+    line-height: 0px;
+    font-weight: 600;
+    letter-spacing: -2px;
+    transition: .5s;
     }
 }
 
@@ -890,7 +899,7 @@ a:focus {
 
 .portfolio .portfolio-wrap {
     position: relative;
-    width: 110%;
+    width: 100%;
     margin-bottom: 30px;
 }
 

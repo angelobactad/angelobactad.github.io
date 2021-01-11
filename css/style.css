@@ -4,7 +4,7 @@
 body {
     color: #797979;
     background: #ffffff;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Barlow', sans-serif;
 }
 
 h1,
@@ -208,6 +208,12 @@ a:focus {
         color: #1b84aa;
     }
 
+    .navbar.nav-sticky .navbar-logo {
+        src: 'img/LOGO.png';
+    }
+
+
+
     .navbar-light .navbar-nav .nav-link,
     .navbar-light .navbar-nav .nav-link:focus {
         padding: 10px 10px 8px 10px;
@@ -259,17 +265,8 @@ a:focus {
 @media (max-width: 575.98px) {
     .navbar .navbar-logo {
     width: auto;
-    height: 30px;
+    height: 40px;
     padding-right: 5px;
-    }
-
-    .navbar .navbar-brand {
-    margin: 0;
-    font-size: 30px;
-    line-height: 0px;
-    font-weight: 600;
-    letter-spacing: -2px;
-    transition: .5s;
     }
 }
 
@@ -279,37 +276,52 @@ a:focus {
 .hero {
     position: relative;
     width: 100%;
-/*    height: 100vh;*/
-    margin-bottom: 45px;
-    padding: 50px 50px 0 0;
+    height: 100vh;
+    margin-bottom: 0px;
+/*    padding: 50px 50px 0 0;*/
     overflow: hidden;
     /*background: linear-gradient(rgba(239, 35, 60, .95), rgba(239, 35, 60, .95)), url(../img/hero-bg.jpg);*/
-    background: linear-gradient(45deg, rgba(34,193,195,.95) 0%, rgba(18,15,115,.95) 100%), url(../img/hero-bg.jpg);
+ /*   background: linear-gradient(45deg, rgba(34,193,195,.95) 0%, rgba(18,15,115,.95) 100%), url(../img/hero-bg.jpg);*/
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 
 .hero .row {
     height: 100%;
+    z-index: 0;
+}
+
+/*Custom Container for the Particles*/
+#hero-container {
+    position: absolute;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
 }
 
 .hero .container-fluid {
+    position: relative;
     padding: 0;
 /*    height: 100vh;*/
     width: 100vw;
+    z-index: 0;
+
+
 }
 
 .hero .hero-image {
     text-align: right;
     padding-right: 75px;
     padding-bottom: 0px
+    z-index: 2000;
 
 }
 
 .hero .hero-image img {
     max-width: 100vw;
-/*    max-height: 100vh;*/
+    max-height: 100vh;
 }
 
 .hero .hero-content {
@@ -319,6 +331,7 @@ a:focus {
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
+    z-index: 2000;
 }
 
 .hero .hero-text p {
@@ -373,6 +386,27 @@ a:focus {
 .hero .hero-btn .btn:first-child {
     margin-right: 10px;
 }
+
+/*Particle JS Starts Here*/
+#particles-js {
+  width: 100%;
+  height: 100%;
+  background-color: #1b84aa;
+  background-image: url('');
+  background-size: cover;
+  background-position: fixed;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+#particles canvas{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/*Particle JS Starts Here*/
 
 @media (max-width: 991.98px) {
     .hero {
@@ -438,7 +472,7 @@ a:focus {
 @media (max-width: 575.98px) {
     .hero .hero-text p {
         font-size: 16px;
-        padding-top: 5px;
+        padding-top: 0px;
     }
     
     .hero .hero-text h1 {
@@ -446,8 +480,8 @@ a:focus {
     }
     
     .hero .hero-text h2 {
-        font-size: 18px;
-        height: 18px;
+/*        font-size: 18px;
+*/        height: 18px;
     }
     
     .hero .hero-btn .btn {
@@ -899,7 +933,7 @@ a:focus {
 
 .portfolio .portfolio-wrap {
     position: relative;
-    width: 100%;
+    width: 110%;
     margin-bottom: 30px;
 }
 
@@ -1435,9 +1469,15 @@ p.mail-me {
     font-weight: 500;
 }
 
-.bordero {
-    border: 10px;
-    border-color: white; 
+p.mail-me-sub {
+    color: white;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+div.bordero {
+    border: 20px !important;
+    border-color: white !important ; 
 }
 
 @media (max-width: 767.98px) {
@@ -1450,6 +1490,19 @@ p.mail-me {
     }
 }
 
+@media (max-width: 575.98px) {
+    p.mail-me {
+        color: white;
+        font-size: 2rem;
+        font-weight: 500;
+}
+
+    p.mail-me-sub {
+        color: white;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+}
 
 /*******************************/
 /*********** Blog CSS **********/
@@ -1657,3 +1710,5 @@ p.mail-me {
         padding: 0 5px;
     }
 }
+
+

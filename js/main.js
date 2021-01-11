@@ -34,8 +34,10 @@
     $(window).scroll(function () {
         if ($(this).scrollTop() > 0) {
             $('.navbar').addClass('nav-sticky');
+            $('.navbar-logo').attr('src','img/logo-trans.png');
         } else {
             $('.navbar').removeClass('nav-sticky');
+            $('.navbar-logo').attr('src','img/logo-light-trans-black.png');
         }
     });
     
@@ -78,7 +80,7 @@
         var typed_strings = $('.hero .hero-text .typed-text').text();
         var typed = new Typed('.hero .hero-text h2', {
             strings: typed_strings.split(', '),
-            typeSpeed: 100,
+            typeSpeed: 150,
             backSpeed: 20,
             smartBackspace: false,
             loop: true
